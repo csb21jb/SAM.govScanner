@@ -45,8 +45,8 @@ The script searches for opportunities using the following keywords (add or takea
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/sam-gov-opportunities-report.git
-    cd sam-gov-opportunities-report
+    git clone https://github.com/csb21jb/SAM.govScanner.git
+    cd SAM.govScanner
     ```
 
 2. **Set up email credentials**:
@@ -57,7 +57,7 @@ The script searches for opportunities using the following keywords (add or takea
         "password": "your_app_password"
     }
     ```
-    - For Yahoo accounts, generate an app-specific password if necessary on yahoo webpage under the security section. This will ensure that your real password isnt used and if compromised, you can just remove this access from yahoo.
+    - For Yahoo accounts, generate an app-specific password on yahoo webpage under the security section. This will ensure that your real password isnt used and if compromised, you can just remove this access from yahoo.
     - For Gmail accounts, conduct the same thing in the security section which will generate the password for the application.
 
 ## Usage
