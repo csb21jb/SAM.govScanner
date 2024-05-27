@@ -13,6 +13,7 @@ This Python script fetches contract opportunities from SAM.gov, focusing on spec
 - **Email report**: Compiles the results into a single email body, making it easy to read and navigate.
 - **Unique entries**: Ensures no duplicate entries in the report.
 - **Timestamped filename**: Uses a Date-Time Group (DTG) format for generating filenames.
+- ****
 
 ## Keywords
 
@@ -61,12 +62,14 @@ The script searches for opportunities using the following keywords (add or takea
 
 ## Usage
 
-1. **Run the script**:
+1. Use in a cronjob to run everyday, weekly, or monthly.
+   
+3. **Run the script manually**: 
     ```sh
     python3 SAM.govScanner.py
     ```
 
-2. **Output**:
+4. **Output**:
     - The script will fetch contract opportunities from SAM.gov for the specified keywords.
     - It compiles the results into a single email body, which is then sent to the specified email address above.
 
