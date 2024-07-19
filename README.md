@@ -65,7 +65,10 @@ The script searches for opportunities using the following keywords (add or takea
     - Go here for further info on SAM.gov API keys - https://open.gsa.gov/api/get-opportunities-public-api/
     - Log into your SAM.gov account to get your API key and place it in the SAM.govScanner.py file
 
- 
+ 4. **Edit Python script**
+    - Add the email address of the account you wish to recieve mail on.
+
+      
 ## Usage
 
 1. Use in a cronjob to run everyday, weekly, or monthly.
