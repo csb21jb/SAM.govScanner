@@ -60,6 +60,12 @@ The script searches for opportunities using the following keywords (add or takea
     - For Yahoo accounts, generate an app-specific password on yahoo webpage under the security section. This will ensure that your real password isnt used and if compromised, you can just remove this access from yahoo.
     - For Gmail accounts, conduct the same thing in the security section which will generate the password for the application.
 
+3. **Obtain SAM.gov API key**:
+    - You MUST have an active SAM.gov account to make this work
+    - Go here for further info on SAM.gov API keys - https://open.gsa.gov/api/get-opportunities-public-api/
+    - Log into your SAM.gov account to get your API key and place it in the SAM.govScanner.py file
+
+ 
 ## Usage
 
 1. Use in a cronjob to run everyday, weekly, or monthly.
