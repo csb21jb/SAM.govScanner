@@ -8,7 +8,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 # Load email credentials
-with open('email_creds.json', 'r') as creds_file:
+with open('email_creds.json', 'r') as creds_file:   #If you get errors or cannot run as a cronjob, use the full path of the creds file
     creds = json.load(creds_file)
     from_email = creds['email']
     from_password = creds['password']
