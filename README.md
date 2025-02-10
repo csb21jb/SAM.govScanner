@@ -8,38 +8,8 @@ This Python script fetches contract opportunities from SAM.gov, focusing on spec
 
 ## Features
 
-- **Fetches data**: Retrieves contract opportunities from SAM.gov based on a predefined list of keywords.
-- **Date range**: Searches for opportunities posted within the last 90 days.
-- **Email report**: Compiles the results into a single email body, making it easy to read and navigate.
-- **Unique entries**: Ensures no duplicate entries in the report.
-- **Timestamped filename**: Uses a Date-Time Group (DTG) format for generating filenames.
-- ****
 
-## Keywords
 
-The script searches for opportunities using the following keywords (add or takeaway as needed):
-
-- Cybersecurity
-- Information Technology
-- IT Security
-- Network Security
-- Data Protection
-- Cloud Security
-- Risk Management
-- Intrusion Detection
-- Security Operations Center (SOC)
-- Vulnerability Assessment
-- Penetration Testing
-- Incident Response
-- Security Audit
-- Encryption
-- Firewall
-- Cyber Defense
-- Threat Intelligence
-- Identity and Access Management (IAM)
-- Security Information and Event Management (SIEM)
-- Cloud
-- Ethernet
 
 ## Installation
 
@@ -87,36 +57,11 @@ The script searches for opportunities using the following keywords (add or takea
 The email will contain sections for each keyword, listing the contract opportunities found. Each section will include details such as the title, notice ID, posted date, solicitation number, description, response deadline, NAICS code, point of contact, and a link to the opportunity.
 
 ```
-Keyword: Cyber Defense
-================================================================================
-Title: Joint Cyber Defense Collaborative Planning Support
-Notice ID: a5996413e08848f684cae31844c894ed
-Posted Date: 2024-05-06
-Solicitation Number: PCCS-24-50005
-Description: https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=a5996413e08848f684cae31844c894ed
-Response Deadline: 2024-05-17T17:00:00-04:00
-NAICS Code: 541330
-Point of Contact: Hannah Moussa, Shawn Curro
-Link: https://sam.gov/opp/a5996413e08848f684cae31844c894ed/view
---------------------------------------------------------------------------------
 
 
-Keyword: Threat Intelligence
-================================================================================
-Title: NATO Request for Information: Threat Intelligence Analytics Platform
-Notice ID: 304d01de920e48f99cefd27f95b67e44
-Posted Date: 2024-05-22
-Solicitation Number: RFI-ACT-SACT-24-66
-Description: https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=304d01de920e48f99cefd27f95b67e44
-Response Deadline: 2024-08-12T09:00:00-04:00
-NAICS Code: 541519
-Point of Contact: N/A
-Link: https://sam.gov/opp/304d01de920e48f99cefd27f95b67e44/view
---------------------------------------------------------------------------------
-```
 
 
-https://github.com/csb21jb/SAM.govScanner/assets/94072917/42626fae-c35e-489c-a099-7e9c0d91cb49
+
 
 
 ## Business Application
