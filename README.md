@@ -37,7 +37,7 @@ Edit the file named `email_creds.json` in the project directory and add:
     "password": "your_app_password"
 }
 ```
-- **Yahoo/Gmail Users:** Generate an app-specific password in your account’s security settings.
+- **Yahoo/Gmail Users:** Generate an app-specific password in your account’s security settings - https://www.youtube.com/watch?v=h_LrGeNV36g&t=7s.
 
 ### **3. Obtain SAM.gov API Key**
 - You **must** have an active SAM.gov account.
