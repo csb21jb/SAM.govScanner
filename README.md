@@ -4,86 +4,107 @@
 
 ## Overview
 
-This Python script fetches contract opportunities from SAM.gov, focusing on specific keywords related to cybersecurity and IT security. It compiles the results into a single email, providing business professionals with an efficient and effective way to stay updated on relevant contract opportunities.
 
-## Features
+**SAM.govScanner** is a Python-based automation tool that fetches government contract opportunities from SAM.gov using NAICS codes and AI-driven analysis. Designed for businesses in cybersecurity, IT, and government contracting, this tool streamlines opportunity identification, ranks contracts based on relevance, and delivers strategic insights via email.
+
+By integrating **OpenAI’s AI capabilities**, SAM.govScanner goes beyond basic contract searches—it evaluates each opportunity, assigns a relevance rating, and provides **customized recommendations** based on your company’s expertise. This ensures **higher-quality leads, strategic bidding decisions, and increased efficiency** in government contracting.
 
 
 
+## **Key Features**
 
-## Installation
+- 🚀 **Automated Opportunity Retrieval** – Fetches the latest SAM.gov opportunities based on **NAICS codes**.
+- 🤖 **AI-Powered Opportunity Analysis** – Assesses contract fit for your company, assigns a **relevance rating (1-10)**, and provides concise recommendations.
+- 📊 **Custom Business Insights** – Identifies effort estimates, compliance risks, competition levels, and proposal feasibility.
+- 📩 **Email Notifications** – Delivers a structured report with AI-ranked opportunities to your inbox.
+- 🔄 **Seamless Scheduling** – Works with cron jobs for daily, weekly, or monthly execution.
 
-1. **Clone the repository**:
-    ```sh
-    git clone https://github.com/csb21jb/SAM.govScanner.git
-    cd SAM.govScanner
-    ```
+---
 
-2. **Set up email credentials**:
-    - Edit the file named `email_creds.json` in the project directory with the following content:
-    ```json
-    {
-        "email": "youremail@example.com",
-        "password": "your_app_password"
-    }
-    ```
-    - For Yahoo accounts, generate an app-specific password on yahoo webpage under the security section. This will ensure that your real password isnt used and if compromised, you can just remove this access from yahoo.
-    - For Gmail accounts, conduct the same thing in the security section which will generate the password for the application.
+## **Installation**
 
-3. **Obtain SAM.gov API key**:
-    - You MUST have an active SAM.gov account to make this work
-    - Go here for further info on SAM.gov API keys - https://open.gsa.gov/api/get-opportunities-public-api/
-    - Log into your SAM.gov account to get your API key and place it in the SAM.govScanner.py file
-
- 4. **Edit Python script**
-    - Add the email address of the account you wish to recieve mail on.
-
-      
-## Usage
-
-1. Use in a cronjob to run everyday, weekly, or monthly.
-   
-3. **Run the script manually**: 
-    ```sh
-    python3 SAM.govScanner.py
-    ```
-
-4. **Output**:
-    - The script will fetch contract opportunities from SAM.gov for the specified keywords.
-    - It compiles the results into a single email body, which is then sent to the specified email address above.
-
-## Example Output
-
-The email will contain sections for each keyword, listing the contract opportunities found. Each section will include details such as the title, notice ID, posted date, solicitation number, description, response deadline, NAICS code, point of contact, and a link to the opportunity.
-
+### **1. Clone the Repository**
+```sh
+git clone https://github.com/csb21jb/SAM.govScanner.git
+cd SAM.govScanner
 ```
 
+### **2. Set Up Email Credentials**
+Edit the file named `email_creds.json` in the project directory and add:
+```json
+{
+    "email": "youremail@example.com",
+    "password": "your_app_password"
+}
+```
+- **Yahoo/Gmail Users:** Generate an app-specific password in your account’s security settings.
+
+### **3. Obtain SAM.gov API Key**
+- You **must** have an active SAM.gov account.
+- Log in to [SAM.gov API](https://open.gsa.gov/api/get-opportunities-public-api/) and generate an API key.
+- Insert it in `SAM.govScanner.py`.
+
+### **4. Configure AI Integration**
+- Set up an **OpenAI API Key** for AI-driven contract analysis.
+- Insert it in `SAM.govScanner.py`.
+
+### **5. Edit The AI Prompt**
+- Ask another AI platform to create a prompt for you and replace.
+
+
+
+## **Usage**
+
+### **1. Automate with a Cron Job**
+Schedule the script to run daily, weekly, or monthly:
+```sh
+crontab -e
+```
+Example (runs daily at 8 AM): NOte - you may have to create a virtual environment for python.
+```sh
+0 8 * * * source /path/to/SAM.govScanner/venv/bin/activate && python3 /path/to/SAM.govScanner.py
+```
+
+### **2. Run Manually**
+```sh
+python3 SAM.govScanner.py
+```
+
+### **3. Output & Email Reports**
+- Fetches SAM.gov contracts within the last **5 days**.
+- Filters **top opportunities** based on **NAICS codes**.
+- Uses **AI to rank contracts** and provide **custom recommendations**.
+- Emails structured contract insights, including:
+  - **Title, NAICS Code, Deadline**
+  - **AI Rating (1-10)**
+  - **Proposal Effort Estimate**
+  - **Competitive Insights**
+  - **Direct SAM.gov Links**
+
+
+## **Example AI-Generated Analysis**
+![image](https://github.com/user-attachments/assets/84a07519-9f74-49ba-9f43-965c60584465)
 
 
 
 
+## **Business Value**
+
+### 🔹 **AI-Powered Decision Support**
+- Eliminates **manual contract filtering**—only **high-potential** opportunities are analyzed.
+- **Prepares businesses for strategic bidding** by identifying risks, effort estimates, and competitive advantages.
+
+### 🔹 **Time-Saving Automation**
+- **No need to search SAM.gov manually**—AI processes contracts and delivers recommendations to your inbox.
+- Enables **proactive engagement** with high-relevance contracts.
+
+### 🔹 **Competitive Edge**
+- **Ranks contracts by AI-driven relevance**, ensuring focus on **high-value** opportunities.
+- Helps businesses **respond faster** and secure **more contracts**.
 
 
-## Business Application
+## **Contributions & Feedback**
+We welcome contributions, feedback, and feature requests. Open a GitHub issue or submit a pull request to help improve **SAM.govScanner**.
 
-### Efficiency
-
-By automating the process of searching and compiling contract opportunities, this script saves significant time and effort for business professionals. Instead of manually searching SAM.gov for relevant contracts, the script provides a consolidated report, making it easy to stay informed.
-
-### Effectiveness
-
-The script ensures that all relevant opportunities are captured and presented in an organized manner. By focusing on specific keywords, businesses can quickly identify and act on the most pertinent contracts, enhancing their ability to secure new business.
-
-### Real-Time Updates
-
-With the script's ability to fetch opportunities posted within the last 90 days and send timely email reports, businesses can stay ahead of the competition by being among the first to respond to new opportunities.
-
-## Contribution
-
-Feel free to contribute to this project by submitting issues or pull requests. Your feedback and improvements are welcome!
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
