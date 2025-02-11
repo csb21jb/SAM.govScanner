@@ -49,7 +49,8 @@ Edit the file named `email_creds.json` in the project directory and add:
 - Insert it in `SAM.govScanner.py`.
 
 ### **5. Edit The AI Prompt**
-- Ask another AI platform to create a prompt for you and replace.
+- Ask another AI platform to create a prompt for you.
+- Insert it in `SAM.govScanner.py`.
 
 
 
